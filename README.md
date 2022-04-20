@@ -170,7 +170,9 @@ Description
 
 [Back to top](#quickmem)
 
-## Technologies used
+## Technologies and libraries used
+
+- color https://pypi.org/project/termcolor/
 
 - [HTML](https://en.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
@@ -193,8 +195,10 @@ Testing text and links
 
 ### Unfixed Bugs
 
-- Bug 1
-- Bug 2
+- Using Colorama library but my tests are not working. When I do a print syntax with the provided syntax to change the font color "Hello World" is not printing.
+  - <i>Used the wrong syntax. Needed to add a "+" sign before the string</i>
+- Pure strings are using the selected colors but all prints from the worksheet are still white and I get a syntax error.
+  - <i>Tried Termcolor library instead of Colorama library and it did the trick</i>
 
  [Back to top](#quickmem)
 

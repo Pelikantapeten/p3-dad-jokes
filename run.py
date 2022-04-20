@@ -1,6 +1,7 @@
 # Imports
 import gspread
 from google.oauth2.service_account import Credentials
+from termcolor import colored
 
 # This was inspired by and borrowed from 
 # Code Instituet Love Sandwiches project
@@ -20,4 +21,4 @@ jokesTest = SHEET.worksheet('jokes')
 
 allData = jokesTest.get_all_values()
 
-print(allData)
+print(colored((allData), 'green'))
