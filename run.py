@@ -17,8 +17,20 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('dad_jokes')
 
-jokesTest = SHEET.worksheet('jokes')
 
-allData = jokesTest.get_all_values()
+def intro_dad_joke():
+    """
+    Application introduction that explains the purpose
+    of the application and gives instructions to the user.
+    """
+    print(colored(('Wellcome to Dad Jokes!'), 'cyan'))
 
-print(colored((allData), 'green'))
+
+def main():
+    """
+    Main function that runs the applications functions
+    """
+    intro_dad_joke()
+
+
+main()
