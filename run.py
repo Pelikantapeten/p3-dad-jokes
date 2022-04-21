@@ -38,6 +38,14 @@ def user_choice():
     print('Hello World!')
 
 
+def display_random_joke():
+    """
+    Function that displays a random joke from the spreadsheet
+    if user selects option 1
+    """
+    print('Hello Option1')
+
+
 def main():
     """
     Main function that runs the applications functions
