@@ -1,8 +1,8 @@
 # Imports
+import random
 import gspread
 from google.oauth2.service_account import Credentials
 from termcolor import colored
-import random
 
 # This was inspired by and borrowed from 
 # Code Instituet Love Sandwiches project
@@ -49,7 +49,7 @@ def user_choice():
 def display_random_joke():
     """
     Function that displays a random joke from the spreadsheet
-    if user selects option 1
+    if user selects option 1 and shows rating of that joke.
     """
     list_of_lists = SHEET.worksheet('jokes').col_values(5)
     del list_of_lists[0]
@@ -58,6 +58,24 @@ def display_random_joke():
     cell = SHEET.worksheet('jokes').find(displayed_joke)
     joke_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 1)).value
     print('\nThis joke is rated ', joke_rating)
+    print(colored(('\nPlease rate this joke between 1 to 5\n'), 'cyan'))
+    print(colored(('1 = not funny at all, 5 = Hillarious\n'), 'cyan'))
+    
+    def enter_rating():
+        """
+        Fuction that let's the user input rating for last joke and stores
+        the rating in the worksheet.
+        """
+        user_rating = input('Your rating: ')
+        user_rating = int(user_rating)
+        total_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 3)).value
+        total_rating = int(total_rating)
+        new_rating = (user_rating + total_rating)
+        SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 3), new_rating)
+        print(total_rating)
+        print(user_rating)
+        print(new_rating)
+    enter_rating()
 
 
 def main():

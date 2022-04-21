@@ -202,6 +202,8 @@ Testing text and links
   - <i>Tried Termcolor library instead of Colorama library and it did the trick</i>
 - Get error messages when I try to access a specific row in the worksheet
   - <i>Used the wrong syntax for the library Gspread. Tryed to install and import a different library but that was also problematic. Eventually I found the syntax for the Gspread library and it worked.</i>
+- Not able to add new rating with total rating
+  - <i>The variables were strings, converted them to int's and it worked</i>
 
  [Back to top](#quickmem)
 
