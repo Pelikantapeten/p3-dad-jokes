@@ -30,6 +30,22 @@ def intro_dad_joke():
     print(colored(('Enter 2 to submit a joke'), 'cyan'))
 
 
+def user_choice():
+    """
+    Function that determines if the user wants to read and rate
+    a joke or want to submit a joke
+    """
+    print('Hello World!')
+
+
+def display_random_joke():
+    """
+    Function that displays a random joke from the spreadsheet
+    if user selects option 1
+    """
+    print('Hello Option1')
+
+
 def main():
     """
     Main function that runs the applications functions
@@ -39,4 +55,3 @@ def main():
 
 
 main()
-
