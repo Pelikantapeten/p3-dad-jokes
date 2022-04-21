@@ -26,11 +26,20 @@ def intro_dad_joke():
     print(colored(('Wellcome to Dad Jokes!'), 'cyan'))
 
 
+def user_choice():
+    """
+    Function that determines if the user wants to read and rate
+    a joke or want to submit a joke
+    """
+    print('Hello World!')
+
+
 def main():
     """
     Main function that runs the applications functions
     """
     intro_dad_joke()
+    user_choice()
 
 
 main()
