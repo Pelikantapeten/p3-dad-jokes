@@ -35,7 +35,7 @@ def user_choice():
     Function that determines if the user wants to read and rate
     a joke or want to submit a joke
     """
-    choice = input('Please, make your choice')
+    choice = input('Please, make your choice (1 or 2)\n')
     if choice == '1':
         display_random_joke()
     elif choice == '2':
