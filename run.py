@@ -35,7 +35,14 @@ def user_choice():
     Function that determines if the user wants to read and rate
     a joke or want to submit a joke
     """
-    print('Hello World!')
+    choice = input('Please, make your choice')
+    if choice == '1':
+        display_random_joke()
+    elif choice == '2':
+        print('Hello choice 2')
+    else:
+        print('You must choose 1 or 2')
+        return user_choice()
 
 
 def display_random_joke():
@@ -43,7 +50,7 @@ def display_random_joke():
     Function that displays a random joke from the spreadsheet
     if user selects option 1
     """
-    print('Hello Option1')
+    print('Random Joke')
 
 
 def main():
