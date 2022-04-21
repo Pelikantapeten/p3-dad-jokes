@@ -23,11 +23,11 @@ def intro_dad_joke():
     Application introduction that explains the purpose
     of the application and gives instructions to the user.
     """
-    print(colored(('Wellcome to Dad Jokes!'), 'cyan'))
-    print(colored(('Placeholder text with instructions'), 'cyan'))
-    print(colored(('Placeholder text with instructions'), 'cyan'))
+    print(colored(('Wellcome to Dad Jokes!\n'), 'cyan'))
+    print(colored(('Endulge yourself in very silly random jokes'), 'cyan'))
+    print(colored(('or contribute with a joke of your own making.\n'), 'cyan'))
     print(colored(('Enter 1 to read and rate a joke'), 'cyan'))
-    print(colored(('Enter 2 to submit a joke'), 'cyan'))
+    print(colored(('Enter 2 to submit a joke\n'), 'cyan'))
 
 
 def user_choice():
