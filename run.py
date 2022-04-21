@@ -53,7 +53,11 @@ def display_random_joke():
     """
     list_of_lists = SHEET.worksheet('jokes').col_values(5)
     del list_of_lists[0]
-    print(random.choice(list_of_lists))
+    displayed_joke = random.choice(list_of_lists)
+    print('\n', displayed_joke)
+    cell = SHEET.worksheet('jokes').find(displayed_joke)
+    joke_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 1)).value
+    print('\nThis joke is rated ', joke_rating)
 
 
 def main():
@@ -64,4 +68,5 @@ def main():
     user_choice()
 
 
-display_random_joke()
+main()
+
