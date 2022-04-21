@@ -173,6 +173,7 @@ Description
 ## Technologies and libraries used
 
 - color https://pypi.org/project/termcolor/
+- Pygsheets https://pygsheets.readthedocs.io/en/stable/
 
 - [HTML](https://en.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
@@ -199,6 +200,8 @@ Testing text and links
   - <i>Used the wrong syntax. Needed to add a "+" sign before the string</i>
 - Pure strings are using the selected colors but all prints from the worksheet are still white and I get a syntax error.
   - <i>Tried Termcolor library instead of Colorama library and it did the trick</i>
+- Get error messages when I try to access a specific row in the worksheet
+  - <i>Used the wrong syntax for the library Gspread. Tryed to install and import a different library but that was also problematic. Eventually I found the syntax for the Gspread library and it worked.</i>
 
  [Back to top](#quickmem)
 

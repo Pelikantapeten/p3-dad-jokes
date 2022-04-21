@@ -2,6 +2,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from termcolor import colored
+import random
 
 # This was inspired by and borrowed from 
 # Code Instituet Love Sandwiches project
@@ -50,7 +51,9 @@ def display_random_joke():
     Function that displays a random joke from the spreadsheet
     if user selects option 1
     """
-    print('Random Joke')
+    list_of_lists = SHEET.worksheet('jokes').col_values(5)
+    del list_of_lists[0]
+    print(random.choice(list_of_lists))
 
 
 def main():
@@ -61,4 +64,4 @@ def main():
     user_choice()
 
 
-main()
+display_random_joke()
