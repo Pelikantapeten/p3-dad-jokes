@@ -79,10 +79,18 @@ def display_random_joke():
             total_number_of_ratings = int(total_number_of_ratings)
             new_total_ratings = (total_number_of_ratings + 1)
             SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 2), new_total_ratings)
+            joke_end()
         else:
             print('You must enter a number between 1 and 5')
             enter_rating()
     enter_rating()
+
+
+def joke_end():
+    """
+    End and restart function for read and rate a joke option
+    """
+    print('End')
 
 
 def main():
