@@ -4,7 +4,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from termcolor import colored
 
-# This was inspired by and borrowed from 
+# The scope was inspired by and borrowed from 
 # Code Instituet Love Sandwiches project
 # https://github.com/Code-Institute-Solutions/love-sandwiches-p4-sourcecode
 SCOPE = [
@@ -58,6 +58,8 @@ def display_random_joke():
     cell = SHEET.worksheet('jokes').find(displayed_joke)
     joke_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 1)).value
     print('\nThis joke is rated ', joke_rating)
+    submitted_by = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 4)).value
+    print('And was submitted by: ', submitted_by)
     print(colored(('\nPlease rate this joke between 1 to 5\n'), 'cyan'))
     print(colored(('1 = not funny at all, 5 = Hillarious\n'), 'cyan'))
     
