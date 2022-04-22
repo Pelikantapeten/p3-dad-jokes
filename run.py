@@ -62,14 +62,17 @@ def display_random_joke():
     Function that displays a random joke from the spreadsheet
     if user selects option 1 and shows rating of that joke.
     """
-    list_of_lists = SHEET.worksheet('jokes').col_values(5)
+    list_of_lists = SHEET.worksheet('jokes').col_values(4)
     del list_of_lists[0]
     displayed_joke = random.choice(list_of_lists)
     print('\n', displayed_joke)
     cell = SHEET.worksheet('jokes').find(displayed_joke)
-    joke_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 1)).value
-    print('\nThis joke is rated ', joke_rating)
-    submitted_by = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 4)).value
+    total_rating_score = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 2)).value
+    total_rating_score = int(total_rating_score)
+    number_of_raitings = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 1)).value
+    number_of_raitings = int(total_rating_score)
+    print('\nThis joke is rated ', (total_rating_score/number_of_raitings))
+    submitted_by = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 3)).value
     print('And was submitted by: ', submitted_by)
     print(colored(('\nPlease rate this joke between 1 to 5\n'), 'cyan'))
     print(colored(('1 = not funny at all, 5 = Hillarious\n'), 'cyan'))
@@ -82,14 +85,14 @@ def display_random_joke():
         user_rating = input('Your rating: ')
         if '1' <= user_rating <= '5':
             user_rating = int(user_rating)
-            total_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 3)).value
+            total_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 2)).value
             total_rating = int(total_rating)
             new_rating = (user_rating + total_rating)
-            SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 3), new_rating)
-            total_number_of_ratings = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 2)).value
+            SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 2), new_rating)
+            total_number_of_ratings = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 1)).value
             total_number_of_ratings = int(total_number_of_ratings)
             new_total_ratings = (total_number_of_ratings + 1)
-            SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 2), new_total_ratings)
+            SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 1), new_total_ratings)
             joke_end()
         else:
             print('You must enter a number between 1 and 5')
@@ -124,7 +127,7 @@ def submit_joke():
     to submit their name or nickname and a joke. All 
     submitted jokes are rated 1 by 1 user
     """
-    worksheet_row = ['1', '1', 'insert_formula']
+    worksheet_row = ['1', '1']
 
     def submitter_name():
         print(colored(('\nPlease enter your name or nickname:'), 'cyan'))
@@ -137,12 +140,11 @@ def submit_joke():
         print(colored(('quotes " to make it easier for users to read.'), 'cyan'))
         print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
         typed_joke = input('')
-        worksheet_row.insert(4, typed_joke)
+        worksheet_row.insert(3, typed_joke)
     submitted_joke()
 
     update_worksheet(worksheet_row, 'jokes')
-    cell = SHEET.worksheet('jokes').find('insert_formula')
-    print(cell)
+    worksheet_row = ['1', '1']
 
 
 def main():

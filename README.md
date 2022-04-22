@@ -208,6 +208,8 @@ Testing text and links
   - <i>Used an if/else statement to check and return if input is faulty</i>
 - The worksheet is not updating correctly. Can't figure out why.
   - <i>Went back to look at Love Sandwiches and created a function that updates the worksheet based on that project</i>
+- Can't figure out how to correctly copy the formula needed in the spreadsheet to get avarage rating.
+  - <i>Will try to do the calculation inside Python instead.</i>
 
  [Back to top](#quickmem)
 
