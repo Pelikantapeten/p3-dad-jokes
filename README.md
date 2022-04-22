@@ -6,7 +6,7 @@
 
 Text to describe the purpose
 
-A live version of the project can be found here: LINK
+A live version of the project can be found here: https://dad-jokes-1.herokuapp.com/
 
 # Table of Content
 
