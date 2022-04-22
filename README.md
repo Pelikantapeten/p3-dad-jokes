@@ -206,6 +206,8 @@ Testing text and links
   - <i>The variables were strings, converted them to int's and it worked</i>
 - Not able to get a proper error message when rating not entered correctly
   - <i>Used an if/else statement to check and return if input is faulty</i>
+- The worksheet is not updating correctly. Can't figure out why.
+  - <i>Went back to look at Love Sandwiches and created a function that updates the worksheet based on that project</i>
 
  [Back to top](#quickmem)
 

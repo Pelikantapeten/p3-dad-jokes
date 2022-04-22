@@ -20,6 +20,16 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('dad_jokes')
 
 
+def update_worksheet(value, worksheet):
+    """
+    Function that updates the worksheet learned how to do this
+    in Code Institutes Walkthru project - Love Sandwiches
+    https://github.com/Code-Institute-Solutions/love-sandwiches-p4-sourcecode
+    """
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(value)
+
+
 def intro_dad_joke():
     """
     Application introduction that explains the purpose
@@ -110,17 +120,29 @@ def joke_end():
 
 def submit_joke():
     """
-    Function that allows the user to submit their name
-    or nickname and a joke. All submitted jokes are rated 1
+    Function with nested finctions that allows the user
+    to submit their name or nickname and a joke. All 
+    submitted jokes are rated 1 by 1 user
     """
-    print(colored(('\nPlease enter your name or nickname:'), 'cyan'))
-    submitter_name = input('')
-    print(colored(('\nPlease write your joke. Use double hyphens for'), 'cyan'))
-    print(colored(('quotes " to make it easier for users to read.'), 'cyan'))
-    print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
-    submitted_joke = input('')
-    print(submitter_name)
-    print(submitted_joke)
+    worksheet_row = ['1', '1', 'insert_formula']
+
+    def submitter_name():
+        print(colored(('\nPlease enter your name or nickname:'), 'cyan'))
+        submitter_name = input('')
+        worksheet_row.insert(0, submitter_name)
+    submitter_name()
+
+    def submitted_joke():
+        print(colored(('\nPlease write your joke. Use double hyphens for'), 'cyan'))
+        print(colored(('quotes " to make it easier for users to read.'), 'cyan'))
+        print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
+        typed_joke = input('')
+        worksheet_row.insert(4, typed_joke)
+    submitted_joke()
+
+    update_worksheet(worksheet_row, 'jokes')
+    cell = SHEET.worksheet('jokes').find('insert_formula')
+    print(cell)
 
 
 def main():
