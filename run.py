@@ -67,14 +67,19 @@ def display_random_joke():
         the rating in the worksheet.
         """
         user_rating = input('Your rating: ')
-        user_rating = int(user_rating)
-        total_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 3)).value
-        total_rating = int(total_rating)
-        new_rating = (user_rating + total_rating)
-        SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 3), new_rating)
-        print(total_rating)
-        print(user_rating)
-        print(new_rating)
+        if '1' <= user_rating <= '5':
+            user_rating = int(user_rating)
+            total_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 3)).value
+            total_rating = int(total_rating)
+            new_rating = (user_rating + total_rating)
+            SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 3), new_rating)
+            total_number_of_ratings = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 2)).value
+            total_number_of_ratings = int(total_number_of_ratings)
+            new_total_ratings = (total_number_of_ratings + 1)
+            SHEET.worksheet('jokes').update_cell(cell.row, (cell.col - 2), new_total_ratings)
+        else:
+            print('You must enter a number between 1 and 5')
+            enter_rating()
     enter_rating()
 
 

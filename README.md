@@ -204,6 +204,8 @@ Testing text and links
   - <i>Used the wrong syntax for the library Gspread. Tryed to install and import a different library but that was also problematic. Eventually I found the syntax for the Gspread library and it worked.</i>
 - Not able to add new rating with total rating
   - <i>The variables were strings, converted them to int's and it worked</i>
+- Not able to get a proper error message when rating not entered correctly
+  - <i>Used an if/else statement to check and return if input is faulty</i>
 
  [Back to top](#quickmem)
 
