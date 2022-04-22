@@ -1,4 +1,5 @@
 # Imports
+import sys
 import random
 import gspread
 from google.oauth2.service_account import Credentials
@@ -101,7 +102,7 @@ def joke_end():
     elif end_choice == 'r':
         main()
     elif end_choice == 'q':
-        print('Hello quit')
+        sys.exit('The application has been closed')
     else:
         print('You must choose j, r or q')
         return end_choice()
