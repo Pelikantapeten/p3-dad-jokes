@@ -90,7 +90,21 @@ def joke_end():
     """
     End and restart function for read and rate a joke option
     """
-    print('End')
+    print(colored(('Thank you for reading and rating a joke!\n'), 'cyan'))
+    print(colored(('What would you like to do now?\n'), 'cyan'))
+    print(colored(('Enter "j" to read and rate another joke.'), 'cyan'))
+    print(colored(('Enter "r" to restart the application'), 'cyan'))
+    print(colored(('Enter "q" to quit\n'), 'cyan'))
+    end_choice = input('Please, make your choice (j, r or q)\n')
+    if end_choice == 'j':
+        display_random_joke()
+    elif end_choice == 'r':
+        main()
+    elif end_choice == 'q':
+        print('Hello quit')
+    else:
+        print('You must choose j, r or q')
+        return end_choice()
 
 
 def main():
