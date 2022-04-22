@@ -113,7 +113,14 @@ def submit_joke():
     Function that allows the user to submit their name
     or nickname and a joke. All submitted jokes are rated 1
     """
-    print('Hello submit joke')
+    print(colored(('\nPlease enter your name or nickname:'), 'cyan'))
+    submitter_name = input('')
+    print(colored(('\nPlease write your joke. Use double hyphens for'), 'cyan'))
+    print(colored(('quotes " to make it easier for users to read.'), 'cyan'))
+    print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
+    submitted_joke = input('')
+    print(submitter_name)
+    print(submitted_joke)
 
 
 def main():
