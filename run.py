@@ -5,7 +5,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from termcolor import colored
 
-# The scope was inspired by and borrowed from 
+# The scope was inspired by and borrowed from
 # Code Instituet Love Sandwiches project
 # https://github.com/Code-Institute-Solutions/love-sandwiches-p4-sourcecode
 SCOPE = [
@@ -41,7 +41,7 @@ def user_choice():
     if choice == '1':
         display_random_joke()
     elif choice == '2':
-        print('Hello choice 2')
+        submit_joke()
     else:
         print('You must choose 1 or 2')
         return user_choice()
@@ -63,7 +63,7 @@ def display_random_joke():
     print('And was submitted by: ', submitted_by)
     print(colored(('\nPlease rate this joke between 1 to 5\n'), 'cyan'))
     print(colored(('1 = not funny at all, 5 = Hillarious\n'), 'cyan'))
-    
+
     def enter_rating():
         """
         Fuction that let's the user input rating for last joke and stores
@@ -108,6 +108,14 @@ def joke_end():
         return end_choice()
 
 
+def submit_joke():
+    """
+    Function that allows the user to submit their name
+    or nickname and a joke. All submitted jokes are rated 1
+    """
+    print('Hello submit joke')
+
+
 def main():
     """
     Main function that runs the applications functions
@@ -117,4 +125,3 @@ def main():
 
 
 main()
-
