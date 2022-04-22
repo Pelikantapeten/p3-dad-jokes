@@ -84,7 +84,7 @@ def display_random_joke():
         Fuction that let's the user input rating for last joke and stores
         the rating in the worksheet.
         """
-        user_rating = input('Your rating: ')
+        user_rating = input('Your rating: \n')
         if '1' <= user_rating <= '5':
             user_rating = int(user_rating)
             total_rating = SHEET.worksheet('jokes').cell(cell.row, (cell.col - 2)).value
@@ -135,7 +135,7 @@ def submit_joke():
         """
         Function that collect the submitters name
         """
-        print(colored(('\nPlease enter your name or nickname:'), 'cyan'))
+        print(colored(('\nPlease enter your name or nickname:\n'), 'cyan'))
         submitter_name = input('')
         worksheet_row.insert(0, submitter_name)
     submitter_name()
@@ -147,7 +147,7 @@ def submit_joke():
         print(colored(('\nPlease write your joke. Use double hyphens for'), 'cyan'))
         print(colored(('quotes " to make it easier for users to read.'), 'cyan'))
         print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
-        typed_joke = input('')
+        typed_joke = input('\n')
         worksheet_row.insert(3, typed_joke)
     submitted_joke()
 
