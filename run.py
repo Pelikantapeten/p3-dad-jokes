@@ -1,4 +1,6 @@
-# Imports
+"""
+Import section
+"""
 import sys
 import random
 import gspread
@@ -124,18 +126,24 @@ def joke_end():
 def submit_joke():
     """
     Function with nested finctions that allows the user
-    to submit their name or nickname and a joke. All 
+    to submit their name or nickname and a joke. All
     submitted jokes are rated 1 by 1 user
     """
     worksheet_row = ['1', '1']
 
     def submitter_name():
+        """
+        Function that collect the submitters name
+        """
         print(colored(('\nPlease enter your name or nickname:'), 'cyan'))
         submitter_name = input('')
         worksheet_row.insert(0, submitter_name)
     submitter_name()
 
     def submitted_joke():
+        """
+        Function that collects the submitters joke
+        """
         print(colored(('\nPlease write your joke. Use double hyphens for'), 'cyan'))
         print(colored(('quotes " to make it easier for users to read.'), 'cyan'))
         print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
@@ -145,6 +153,28 @@ def submit_joke():
 
     update_worksheet(worksheet_row, 'jokes')
     worksheet_row = ['1', '1']
+    submit_end()
+
+
+def submit_end():
+    """
+    End and restart function for submitting joke option
+    """
+    print(colored(('\nThank you for submitting a joke!\n'), 'cyan'))
+    print(colored(('What would you like to do now?\n'), 'cyan'))
+    print(colored(('Enter "s" to submit another joke.'), 'cyan'))
+    print(colored(('Enter "r" to restart the application'), 'cyan'))
+    print(colored(('Enter "q" to quit\n'), 'cyan'))
+    end_choice = input('Please, make your choice (s, r or q)\n')
+    if end_choice == 's':
+        display_random_joke()
+    elif end_choice == 'r':
+        main()
+    elif end_choice == 'q':
+        sys.exit('The application has been closed')
+    else:
+        print('You must choose s, r or q')
+        return end_choice()
 
 
 def main():

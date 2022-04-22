@@ -209,7 +209,7 @@ Testing text and links
 - The worksheet is not updating correctly. Can't figure out why.
   - <i>Went back to look at Love Sandwiches and created a function that updates the worksheet based on that project</i>
 - Can't figure out how to correctly copy the formula needed in the spreadsheet to get avarage rating.
-  - <i>Will try to do the calculation inside Python instead.</i>
+  - <i>Will try to do the calculation inside Python instead. Update: Did overhaul all that had to do with avarage score. Removed the calculation of score from the spreadsheet and did the calculation in run.py instead</i>
 
  [Back to top](#quickmem)
 
