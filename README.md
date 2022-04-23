@@ -199,6 +199,8 @@ Testing has been conducted continuously during the development process. Manual t
   - <i>Created a nested function inside the end function that validates the input and prevents crashing</i>
 - Users can submit joke and name with only white spaces.
   - <i>Added nested functions in both submit functions for joke and name that controlls lenght and check for white spaces.Found information on how to do it on https://www.geeksforgeeks.org/python-string-isspace-method/</i>
+- Average score is not calculated properly.
+  - <i>The formula for average score was not correct. It contained wrong values. Corrected.</i>
 
 ### Validator Testing 
 
@@ -210,7 +212,7 @@ Final testing warned about long lines. This has been corrected and the code pass
 
 Currently working to solve the bugs in this list. They will be moved to the Bugs during development section when they are solved.
 
-- Average score is not calculated properly
+- No known bugs at this point
 
  [Back to top](#dad-jokes)
 

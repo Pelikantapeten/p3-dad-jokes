@@ -76,8 +76,10 @@ def display_random_joke():
     number_of_raitings = SHEET.worksheet('jokes').cell(
         cell.row, (cell.col - 1)
     ).value
-    number_of_raitings = int(total_rating_score)
-    print('\nThis joke is rated ', (total_rating_score/number_of_raitings))
+    number_of_raitings = int(number_of_raitings)
+    average_rating = total_rating_score / number_of_raitings
+    average_rating = float(average_rating)
+    print('\nThis joke is rated', (format(average_rating, '.2f')))
     submitted_by = SHEET.worksheet('jokes').cell(
         cell.row, (cell.col - 3)
     ).value
@@ -221,7 +223,7 @@ def submit_joke():
             typed_joke = input('Enter your joke:\n')
             if len(typed_joke) <= 10:
                 print(colored((
-                    'Joke needs to be longer than 2 10 signs'), 'cyan'
+                    'Joke needs to be longer than 10 signs'), 'cyan'
                 ))
                 controll_length_joke()
             elif len(typed_joke) >= 300:
@@ -289,4 +291,4 @@ def main():
     user_choice()
 
 
-main()
+display_random_joke()
