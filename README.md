@@ -191,6 +191,8 @@ Testing has been conducted continuously during the development process. Manual t
   - <i>Went back to look at Love Sandwiches and created a function that updates the worksheet based on that project</i>
 - Can't figure out how to correctly copy the formula needed in the spreadsheet to get average rating.
   - <i>Will try to do the calculation inside Python instead. Update: Did overhaul all that had to do with average score. Removed the calculation of score from the spreadsheet and did the calculation in run.py instead</i>
+- When a joke is rated with a number containing a . or a , the application crashes.
+  - <i>Added a try statement to check that the input is an integer</i>
 
 ### Validator Testing 
 
@@ -201,8 +203,6 @@ Final testing warned about long lines. This has been corrected and the code pass
 ### Unfixed Bugs
 
 Currently working to solve the bugs in this list. They will be moved to the Bugs during development section when they are solved.
-
- - When a joke is rated with a number containing a . or a , the application crashes.
 
  - On the end screens: If an integer or float value is entered the application crashes.
 

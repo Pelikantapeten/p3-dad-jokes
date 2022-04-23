@@ -90,8 +90,14 @@ def display_random_joke():
         Fuction that let's the user input rating for last joke and stores
         the rating in the worksheet.
         """
-        user_rating = input('Your rating: \n')
-        if '1' <= user_rating <= '5':
+        while True:
+            try:
+                user_rating = int(input('Your rating: \n'))
+                break
+            except ValueError:
+                print('You must enter a number between 1 and 5')
+                continue
+        if 1 <= user_rating <= 5:
             user_rating = int(user_rating)
             total_rating = SHEET.worksheet('jokes').cell(
                 cell.row, (cell.col - 2)
