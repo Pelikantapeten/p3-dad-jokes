@@ -34,6 +34,7 @@ A live version of this project can be found at this url: https://dad-jokes-1.her
 + [Technologies used](#technologies-used "Technologies used")
   + [Data storage](#data-storage "Data Storage")
 + [Testing](#testing "Testing")
+  + [Bugs during development](#bugs-during-development "Bugs during development")
   + [Validator Testing](#validator-testing "Validator Testing")
   + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 + [Development and Deployment](#development-and-deployment "Development and Deployment")
@@ -138,33 +139,44 @@ When the joke has been submitted the user is taken to the last section of this o
 
 If s is selected the user will restart the submit function, if r is pressed the application starts over from the start selection screen and q will terminate the application.
 
+## Features Left to Implement
+
+Future versions of this application will contain a graphical user interface and a capability for users to search and find the rating of their jokes.
+
 [Back to top](#dad-jokes)
 
 ## Technologies and libraries used
 
-- color https://pypi.org/project/termcolor/
-- Pygsheets https://pygsheets.readthedocs.io/en/stable/
+Main languages
 
-- [HTML](https://en.wikipedia.org/wiki/HTML)
-- [CSS](https://en.wikipedia.org/wiki/CSS)
-- [JavaScript](https://en.wikipedia.org/wiki/javascript)
+- [Python](https://en.wikipedia.org/wiki/Python_programming_language)
+- [HTML](https://en.wikipedia.org/wiki/HTML) - Provided in the Code Institute template
+- [CSS](https://en.wikipedia.org/wiki/CSS) - Provided in the Code Institute template
+- [JavaScript](https://en.wikipedia.org/wiki/javascript) - Provided in the Code Institute template
+
+Python libraries and api used
+
+- [Sys](https://docs.python.org/3/library/sys.html)
+- [Random](https://docs.python.org/3/library/random.html)
+- [Google auth](https://google-auth.readthedocs.io/en/master/index.html)
+- [Termcolor](https://pypi.org/project/termcolor/)
+
+### Data storage
+
+Jokes, submitted jokes, sumbmitter name and scores are fetched and stored in a Google Sheet using:
+
+- [Google Drive API](https://developers.google.com/drive/api)
+- [Google Sheet API](https://developers.google.com/sheets/api)
+
+
 
 ## Testing 
 
-- text option 1
-
-  - Solution
-
-- Text option 2
-
-  - Solution
+Testing has been conducted continuously during the development process. Manual testing has been conducted by the author and my mentor [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/). Read more about bugs during development and unfixed bugs for more information.
 
 
-### Validator Testing 
 
-Testing text and links
-
-### Unfixed Bugs
+### Bugs during development
 
 - Using Colorama library but my tests are not working. When I do a print syntax with the provided syntax to change the font color "Hello World" is not printing.
   - <i>Used the wrong syntax. Needed to add a "+" sign before the string</i>
@@ -181,7 +193,17 @@ Testing text and links
 - Can't figure out how to correctly copy the formula needed in the spreadsheet to get avarage rating.
   - <i>Will try to do the calculation inside Python instead. Update: Did overhaul all that had to do with avarage score. Removed the calculation of score from the spreadsheet and did the calculation in run.py instead</i>
 
- [Back to top](#quickmem)
+### Validator Testing 
+
+The code has also been tested by using PEP8 Online http://pep8online.com/.
+
+Final testing warned about long lines. This has been corrected and the code passes without any issues.
+
+### Unfixed Bugs
+
+
+
+ [Back to top](#dad-jokes)
 
 ## Development and Deployment
 
