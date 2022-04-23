@@ -291,4 +291,4 @@ def main():
     user_choice()
 
 
-display_random_joke()
+main()
