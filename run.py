@@ -135,8 +135,8 @@ def submit_joke():
         """
         Function that collect the submitters name
         """
-        print(colored(('\nPlease enter your name or nickname:\n'), 'cyan'))
-        submitter_name = input('')
+        print(colored(('\nPlease follow the steps to submit a joke.\n'), 'cyan'))
+        submitter_name = input('Please enter your name or nickname:\n')
         worksheet_row.insert(0, submitter_name)
     submitter_name()
 
@@ -147,7 +147,7 @@ def submit_joke():
         print(colored(('\nPlease write your joke. Use double hyphens for'), 'cyan'))
         print(colored(('quotes " to make it easier for users to read.'), 'cyan'))
         print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
-        typed_joke = input('\n')
+        typed_joke = input('Enter your joke:\n')
         worksheet_row.insert(3, typed_joke)
     submitted_joke()
 
@@ -167,7 +167,7 @@ def submit_end():
     print(colored(('Enter "q" to quit\n'), 'cyan'))
     end_choice = input('Please, make your choice (s, r or q)\n')
     if end_choice == 's':
-        display_random_joke()
+        submit_joke()
     elif end_choice == 'r':
         main()
     elif end_choice == 'q':

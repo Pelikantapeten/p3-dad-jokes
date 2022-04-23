@@ -18,8 +18,6 @@ A live version of the project can be found here: https://dad-jokes-1.herokuapp.c
   + [User Goals](#user-goals "User")
   + [Project Requirements](#project-requirements "Project Requirements")
   + [Design diagram](#design-diagram "Design diagram")
-    + [Design Discovery Phase](#design-discovery-phase "Design Discovery Phase")
-    + [Images](#images "Images")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
     + [Start Screen](#start-screen "Start Screen")
@@ -72,18 +70,12 @@ The user stories
 
 Text and flowchart
 
-#### Design Discovery Phase
 
-Describe the designphase with screens from Balsamiq and flowchart
 
 Screen
 
 ![Screen](/docs/readme-images/placeholder-900-630.jpg)
 
-
-#### Images
-
-Images in this project
 
 [Back to top](#quickmem)
 
