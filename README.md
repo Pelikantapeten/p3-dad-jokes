@@ -1,6 +1,6 @@
 # Dad Jokes
 
-![Responsive screenshot](/docs/readme-images/placeholder-1000-700.jpg)
+![Responsive screenshot](/docs/readme-images/responsive-screen.png)
 
 # The purpose with this project
 
@@ -29,15 +29,10 @@ A live version of this project can be found at this url: https://dad-jokes-1.her
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
     + [Start Read and Rate](#start-read-and-rate "Start read and rate")
-    + [Joke Screen](#joke-screen "Joke Screen")
-    + [Submit Score Screen](#submit-score-screen "Submit Score Screen")
-    + [Joke Restart Screen](#joke-restart-screen "Joke Restart Screen")
-    + [Submit Name Screen](#submit-name-screen "Submit Name Screen")
-    + [Submit Joke Screen](#submit-joke-screen "Submit Joke Screen")
-    + [Submit Restart Screen](#submit-restart-screen "Submit Restart Screen")
-    + [End Screen](#end-screen "End Screen")
+    + [Start submit joke](#start-submit-joke "Start submit joke")
   + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
 + [Technologies used](#technologies-used "Technologies used")
+  + [Data storage](#data-storage "Data Storage")
 + [Testing](#testing "Testing")
   + [Validator Testing](#validator-testing "Validator Testing")
   + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
@@ -109,8 +104,6 @@ Dad Jokes consists of two features. The user chooses the option of feature from 
 
 #### Start read and rate
 
-Start read and rate
-
 The user starts the read and rate option from the start section of the application. To read and rate the number 1 needs to be entered followed by the enter key.
 
 ![Start read and rate](/docs/readme-images/start-read-screen.png)
@@ -123,67 +116,29 @@ When the rating has been entered the user is taken to the last section of this o
 
 ![Read and rate screen](/docs/readme-images/end-read-rate-screen.png)
 
-#### Joke Screen
+If j is selected the user will receive another joke and rate, if r is pressed the application starts over from the start selection screen and q will terminate the application.
 
-Description 
+#### Start submit joke
 
- - Options
+The user starts the submit option from the start section of the application. To submit a joke the number 2 needs to be entered followed by the enter key.
 
-![Game Screen](/docs/readme-images/placeholder-900-630.jpg)
+![Start submit](/docs/readme-images/start-read-screen.png)
 
-#### Submit score screen
+After the selection the user is presented with an instruction to follow the steps and enter a name or a nickname.
 
-Description
+![Enter name](/docs/readme-images/enter-name-screen.png)
 
- - Options
+When name is entered the user is presented with instructions on how to write to make it easier for other users and prompted to enter their joke.
 
-![About us Section part 1](/docs/readme-images/placeholder-900-630.jpg)
+![Enter name](/docs/readme-images/enter-joke-screen.png)
 
-#### Joke restart screen
+When the joke has been submitted the user is taken to the last section of this option. Here the user can choose to submit another joke, restart the application or quit the application.
 
-Description
+![Enter name](/docs/readme-images/end-submit-screen.png)
 
- - Options
+If s is selected the user will restart the submit function, if r is pressed the application starts over from the start selection screen and q will terminate the application.
 
-![About us Section part 1](/docs/readme-images/placeholder-900-630.jpg)
-
-#### Submit name screen
-
-Description
-
- - Options
-
-![About us Section part 1](/docs/readme-images/placeholder-900-630.jpg)
-
-#### Submit joke screen
-
-Description
-
- - Options
-
-![About us Section part 1](/docs/readme-images/placeholder-900-630.jpg)
-
-#### Submit restart screen
-
-Description
-
- - Options
-
-![About us Section part 1](/docs/readme-images/placeholder-900-630.jpg)
-
-#### End screen
-
-Description
-
- - Options
-
-![About us Section part 1](/docs/readme-images/placeholder-900-630.jpg)
-
-### Features Left to Implement
-
-- text
-
-[Back to top](#quickmem)
+[Back to top](#dad-jokes)
 
 ## Technologies and libraries used
 
@@ -258,4 +213,4 @@ Text
 
  [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe
 
-[Back to top](#quickmem)
+[Back to top](#dad-jokes)
