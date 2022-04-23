@@ -4,23 +4,31 @@
 
 # The purpose with this project
 
-Text to describe the purpose
+Dad Jokes is a console based application that accommodates individuals that are either interested in quick amusement of silly jokes or individuals that wants to share their silly jokes with other users. The user interface is text based and it is run from a text terminal or other types of command-in interfaces. 
 
-A live version of the project can be found here: https://dad-jokes-1.herokuapp.com/
+The application has two options at start that either lets the user read and rate a joke or submit a joke together with their name.
+
+Target audience: All individuals that wants to read and rate a silly joke and all individuals that wants to submit a joke for future rating.
+
+This project is the third of five milestone projects that needs to be completed in order for me to receive a diploma in Software Development from The Code Institute https://codeinstitute.net/
+
+Required technologies for this project: Python
+
+A live version of this project can be found at this url: https://dad-jokes-1.herokuapp.com/
 
 # Table of Content
 
 + [UX](#ux "UX")
   + [User Demographic](#user-demographic "User Demographic")
   + [User Stories](#user-stories "User Stories")
-    + [New Users](#new-users "New Users")
-    + [Old Users](#old-users "Old Users")
-  + [User Goals](#user-goals "User")
+    + [User reading](#user-reading "User reading")
+    + [User submitting](#user-submitting "User submitting")
+  + [User Goals](#user-goals "User goals")
   + [Project Requirements](#project-requirements "Project Requirements")
   + [Design diagram](#design-diagram "Design diagram")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
-    + [Start Screen](#start-screen "Start Screen")
+    + [Start Read and Rate](#start-read-and-rate "Start read and rate")
     + [Joke Screen](#joke-screen "Joke Screen")
     + [Submit Score Screen](#submit-score-screen "Submit Score Screen")
     + [Joke Restart Screen](#joke-restart-screen "Joke Restart Screen")
@@ -42,63 +50,78 @@ A live version of the project can be found here: https://dad-jokes-1.herokuapp.c
 
 ### User Demographic
 
-This game is ment for:
+This application is ment for:
 
- - All individuals, regarding age, that wants to play a challenging game.
+ - All individuals that wants amusements gotten by reading short silly jokes.
+ - All individuals that wants to share silly jokes and have the rated by other users.
 
 ### User Stories
 
-The user stories
+I have divided the user stories for this application in to two different sections, User Reading and User Submitting. The scenarios do not differ much between Old users and New users.
 
-#### New users
+#### User reading
 
- - Text
+ - I want to read a silly joke.
+ - I want to rate a silly joke.
+ - I want to see who submitted silly jokes.
+ - I want to see the rating my submitted joke has. (Old user)
+ - I want to see if there is any more jokes since last time I used the application (Old user)
 
-#### Old users
+#### User submitting
 
- - Text
+ - I want to submit a silly joke.
+ - I want other users to read my silly joke.
+ - I want other users to rate my silly joke.
 
 ### User Goals
 
- - Text
+To get amused by silly jokes for a short period of time OR submit silly jokes.
 
 ### Project Requirements
 
- - Requirements from CI
+Python application using libraries/API and deployed to a cloud-based platform.
 
 ### Design diagram
 
-Text and flowchart
+Dad Jokes is a console based application. For that reason no work was put in to graphical design. Instead focus was put on creating a diagram of the entire application and use that as the base for the code. The diagram also include the Google Sheet used for data storage.
 
 
+This is the initial diagram:
 
-Screen
+![Intial diagram](/docs/readme-images/p3-diagram-screen.png)
 
-![Screen](/docs/readme-images/placeholder-900-630.jpg)
+During the development process a few things were changed in the diagram. The main reason for this was that I had done a flaw in the design of the Google Sheet. I had placed the calculation formula for average score on jokes inside the sheet. I never got this to work properly so that column was eventually removed and the calculation is done in the application instead.
 
+After the final alterations the final application diagram looks like this:
 
-[Back to top](#quickmem)
+![Final diagram](/docs/readme-images/p3-diagram-final-screen.png)
+
+[Back to top](#dad-jokes)
 
 ## Features 
 
-Text that describes the features
+Dad Jokes consists of two features. The user chooses the option of feature from the start section of the application. The features are:
 
- - screen 1
- - screen 2
- - etc
-
-Descriptive text
+ - Read and rate a joke
+ - Submit a joke
 
 ### Existing Features
 
-#### Start
+#### Start read and rate
 
-Description
+Start read and rate
 
- - Option 1
- - Option 2
+The user starts the read and rate option from the start section of the application. To read and rate the number 1 needs to be entered followed by the enter key.
 
-![Start](/docs/readme-images/placeholder-900-630.jpg)
+![Start read and rate](/docs/readme-images/start-read-screen.png)
+
+After selection the user is presented with a random selected joke from the Google sheet. The user also sees the rating of the joke. The user is also asked to rate the joke by entering a number between 1 and 5.
+
+![Read and rate screen](/docs/readme-images/read-rate-screen.png)
+
+When the rating has been entered the user is taken to the last section of this option. Here the user can choose to read and rate a new joke, restart the application or quit the application.
+
+![Read and rate screen](/docs/readme-images/end-read-rate-screen.png)
 
 #### Joke Screen
 
