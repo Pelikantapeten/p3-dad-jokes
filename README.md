@@ -39,7 +39,6 @@ A live version of this project can be found at this url: https://dad-jokes-1.her
   + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 + [Development and Deployment](#development-and-deployment "Development and Deployment")
 + [Content](#content "Content")
-+ [Media](#media "Media")
 + [Credits](#credits "Credits")
 
 ## UX
@@ -172,7 +171,7 @@ Jokes, submitted jokes, sumbmitter name and scores are fetched and stored in a G
 
 ## Testing 
 
-Testing has been conducted continuously during the development process. Manual testing has been conducted by the author and my mentor [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/). Read more about bugs during development and unfixed bugs for more information.
+Testing has been conducted continuously during the development process. Manual testing has been conducted by the author and my mentor [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) and fellow student [Lauren-Nicole Popich](https://www.linkedin.com/in/lauren-nicole-popich-1ab87539/). Read more about bugs during development and unfixed bugs for more information.
 
 
 
@@ -183,15 +182,15 @@ Testing has been conducted continuously during the development process. Manual t
 - Pure strings are using the selected colors but all prints from the worksheet are still white and I get a syntax error.
   - <i>Tried Termcolor library instead of Colorama library and it did the trick</i>
 - Get error messages when I try to access a specific row in the worksheet
-  - <i>Used the wrong syntax for the library Gspread. Tryed to install and import a different library but that was also problematic. Eventually I found the syntax for the Gspread library and it worked.</i>
+  - <i>Used the wrong syntax for the library Gspread. Tried to install and import a different library but that was also problematic. Eventually I found the syntax for the Gspread library and it worked.</i>
 - Not able to add new rating with total rating
   - <i>The variables were strings, converted them to int's and it worked</i>
 - Not able to get a proper error message when rating not entered correctly
   - <i>Used an if/else statement to check and return if input is faulty</i>
 - The worksheet is not updating correctly. Can't figure out why.
   - <i>Went back to look at Love Sandwiches and created a function that updates the worksheet based on that project</i>
-- Can't figure out how to correctly copy the formula needed in the spreadsheet to get avarage rating.
-  - <i>Will try to do the calculation inside Python instead. Update: Did overhaul all that had to do with avarage score. Removed the calculation of score from the spreadsheet and did the calculation in run.py instead</i>
+- Can't figure out how to correctly copy the formula needed in the spreadsheet to get average rating.
+  - <i>Will try to do the calculation inside Python instead. Update: Did overhaul all that had to do with average score. Removed the calculation of score from the spreadsheet and did the calculation in run.py instead</i>
 
 ### Validator Testing 
 
@@ -201,13 +200,54 @@ Final testing warned about long lines. This has been corrected and the code pass
 
 ### Unfixed Bugs
 
+Currently working to solve the bugs in this list. They will be moved to the Bugs during development section when they are solved.
+
+ - When a joke is rated with a number containing a . or a , the application crashes.
+
+ - On the end screens: If an integer or float value is entered the application crashes.
+
+ - Users can submit even if they haven’t entered a text or a name.
+
+ - Application crashes if enter is pressed without a value in the end screens.
 
 
  [Back to top](#dad-jokes)
 
 ## Development and Deployment
 
-Deployment description
+The development environment used for this project was GitPod. To track the development stage and handle version control regular commits and pushes to GitHub has been conducted. The GitPod environment was created using a template provided by Code Institute.
+
+The live version of the project is deployed using Heroku(https://heroku.com)
+
+This is how this project was deployed using Heroku:
+
+To prepare for deployment on Heroku a requirements.txt needs to be created in the same folder as the .py file in GitPod. This file needs to contain a list of all libraries the project needs to run as a Heroku App.
+
+Then follow these steps:
+
+ - Login to Heroku (Create an account if necessary)
+ - Click on New in the Heroku dashboard and select ”Create new app”
+ - Write a name for the app and choose your region and click ”Create App”
+ - In the settings tab for the new application I created two Config vars.
+   - One is named CREDS and contains the credentials key for Google Drive API
+   - One is name PORT and has the value of 8000
+ - Two buildpack scripts were added: Python and Nodejs (in that order)
+
+Heroku CLI was used to deploy the project. The following steps were taken in the terminal in GitPod
+
+Deploying your app to heroku
+1. Login to heroku and enter your details.
+ - command: heroku login -i
+2. Get your app name from heroku.
+ - command: heroku apps
+3. Set the heroku remote. (Replace <i>app_name</i> with your actual app name)
+ - command: heroku git:remote -a <i>app_name</i>
+4. Add, commit and push to github
+ - command: git add . && git commit -m "Deploy to Heroku via CLI"
+5. Push to both github and heroku
+ - command: git push origin main
+ - command: git push heroku main
+
 
 ## Content 
 
