@@ -193,6 +193,10 @@ Testing has been conducted continuously during the development process. Manual t
   - <i>Will try to do the calculation inside Python instead. Update: Did overhaul all that had to do with average score. Removed the calculation of score from the spreadsheet and did the calculation in run.py instead</i>
 - When a joke is rated with a number containing a . or a , the application crashes.
   - <i>Added a try statement to check that the input is an integer</i>
+- On the end screens: If an integer or float value is entered the application crashes.
+  - <i>Created a nested function inside the end function that validates the input and prevents crashing</i>
+- Application crashes if enter is pressed without a value in the end screens.
+  - <i>Created a nested function inside the end function that validates the input and prevents crashing</i>
 
 ### Validator Testing 
 
@@ -204,12 +208,7 @@ Final testing warned about long lines. This has been corrected and the code pass
 
 Currently working to solve the bugs in this list. They will be moved to the Bugs during development section when they are solved.
 
- - On the end screens: If an integer or float value is entered the application crashes.
-
- - Users can submit even if they haven’t entered a text or a name.
-
- - Application crashes if enter is pressed without a value in the end screens.
-
+- Users can submit even if they haven’t entered a text or a name.
 
  [Back to top](#dad-jokes)
 

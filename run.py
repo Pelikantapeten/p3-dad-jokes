@@ -131,16 +131,31 @@ def joke_end():
     print(colored(('Enter "j" to read and rate another joke.'), 'cyan'))
     print(colored(('Enter "r" to restart the application'), 'cyan'))
     print(colored(('Enter "q" to quit\n'), 'cyan'))
-    end_choice = input('Please, make your choice (j, r or q)\n')
-    if end_choice == 'j':
-        display_random_joke()
-    elif end_choice == 'r':
-        main()
-    elif end_choice == 'q':
-        sys.exit('The application has been closed')
-    else:
-        print('You must choose j, r or q')
-        return end_choice()
+
+    def input_function():
+        """
+        Function for user input that validates that
+        the user enters correct value.
+        """
+        while True:
+            try:
+                end_choice = str(input(
+                    'Please, make your choice (j, r or q)\n'
+                ))
+                break
+            except ValueError:
+                print('You must choose j, r or q')
+            continue
+        if end_choice == 'j':
+            display_random_joke()
+        elif end_choice == 'r':
+            main()
+        elif end_choice == 'q':
+            sys.exit('The application has been closed')
+        else:
+            print('You must choose j, r or q')
+        return input_function()()
+    input_function()
 
 
 def submit_joke():
@@ -191,16 +206,31 @@ def submit_end():
     print(colored(('Enter "s" to submit another joke.'), 'cyan'))
     print(colored(('Enter "r" to restart the application'), 'cyan'))
     print(colored(('Enter "q" to quit\n'), 'cyan'))
-    end_choice = input('Please, make your choice (s, r or q)\n')
-    if end_choice == 's':
-        submit_joke()
-    elif end_choice == 'r':
-        main()
-    elif end_choice == 'q':
-        sys.exit('The application has been closed')
-    else:
-        print('You must choose s, r or q')
-        return end_choice()
+
+    def input_function():
+        """
+        Function for user input that validates that
+        the user enters correct value.
+        """
+        while True:
+            try:
+                end_choice = input(
+                    'Please, make your choice (s, r or q)\n'
+                )
+                break
+            except ValueError:
+                print('You must choose s, r or q')
+            continue
+        if end_choice == 's':
+            submit_joke()
+        elif end_choice == 'r':
+            main()
+        elif end_choice == 'q':
+            sys.exit('The application has been closed')
+        else:
+            print('You must choose s, r or q')
+        return input_function()()
+    input_function()
 
 
 def main():
