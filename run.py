@@ -173,8 +173,32 @@ def submit_joke():
         print(colored((
             '\nPlease follow the steps to submit a joke.\n'), 'cyan')
             )
-        submitter_name = input('Please enter your name or nickname:\n')
-        worksheet_row.insert(0, submitter_name)
+
+        def controll_length_name():
+            """
+            Function that controlls lenght and hinders empty
+            submits.
+            """
+            submitter_name = input('Please enter your name or nickname:\n')
+            if len(submitter_name) <= 2:
+                print(colored((
+                    'Name needs to be between 2 and 10 signs'), 'cyan'
+                ))
+                controll_length_name()
+            elif len(submitter_name) >= 10:
+                print(colored((
+                    'Name needs to be between 2 and 10 signs'), 'cyan'
+                ))
+                controll_length_name()
+            elif submitter_name.isspace():
+                print(colored((
+                    'Name needs to be between 2 and 10 signs'), 'cyan'
+                ))
+                controll_length_name()
+            else:
+                worksheet_row.insert(0, submitter_name)
+        controll_length_name()
+
     submitter_name()
 
     def submitted_joke():
@@ -188,8 +212,32 @@ def submit_joke():
             ('quotes " to make it easier for users to read.'), 'cyan')
         )
         print(colored(('Do not press "Enter" for line breaks'), 'cyan'))
-        typed_joke = input('Enter your joke:\n')
-        worksheet_row.insert(3, typed_joke)
+
+        def controll_length_joke():
+            """
+            Function that controlls lenght and hinders empty
+            submits.
+            """
+            typed_joke = input('Enter your joke:\n')
+            if len(typed_joke) <= 10:
+                print(colored((
+                    'Joke needs to be longer than 2 10 signs'), 'cyan'
+                ))
+                controll_length_joke()
+            elif len(typed_joke) >= 300:
+                print(colored((
+                    'Joke needs to be shorter and 300 signs'), 'cyan'
+                ))
+                controll_length_joke()
+            elif typed_joke.isspace():
+                print(colored((
+                    'Joke needs to contain signs'), 'cyan'
+                ))
+                controll_length_joke()
+            else:
+                worksheet_row.insert(3, typed_joke)
+        controll_length_joke()
+
     submitted_joke()
 
     update_worksheet(worksheet_row, 'jokes')

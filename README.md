@@ -124,11 +124,11 @@ The user starts the submit option from the start section of the application. To 
 
 ![Start submit](/docs/readme-images/start-read-screen.png)
 
-After the selection the user is presented with an instruction to follow the steps and enter a name or a nickname.
+After the selection the user is presented with an instruction to follow the steps and enter a name or a nickname. If the user enters a name shorter than two signs or longer than 10 signs they will be prompted to correct.
 
 ![Enter name](/docs/readme-images/enter-name-screen.png)
 
-When name is entered the user is presented with instructions on how to write to make it easier for other users and prompted to enter their joke.
+When name is entered the user is presented with instructions on how to write to make it easier for other users and prompted to enter their joke. If users tries to submit a very short joke or a joke longer than 300 signs they will be prompted to correct it. They user cannot submit empty jokes.
 
 ![Enter name](/docs/readme-images/enter-joke-screen.png)
 
@@ -197,6 +197,8 @@ Testing has been conducted continuously during the development process. Manual t
   - <i>Created a nested function inside the end function that validates the input and prevents crashing</i>
 - Application crashes if enter is pressed without a value in the end screens.
   - <i>Created a nested function inside the end function that validates the input and prevents crashing</i>
+- Users can submit joke and name with only white spaces.
+  - <i>Added nested functions in both submit functions for joke and name that controlls lenght and check for white spaces.Found information on how to do it on https://www.geeksforgeeks.org/python-string-isspace-method/</i>
 
 ### Validator Testing 
 
@@ -208,7 +210,7 @@ Final testing warned about long lines. This has been corrected and the code pass
 
 Currently working to solve the bugs in this list. They will be moved to the Bugs during development section when they are solved.
 
-- Users can submit even if they haven’t entered a text or a name.
+- Average score is not calculated properly
 
  [Back to top](#dad-jokes)
 
