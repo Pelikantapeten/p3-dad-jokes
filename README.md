@@ -248,30 +248,29 @@ Deploying your app to heroku
  - command: git push origin main
  - command: git push heroku main
 
+After those steps were taken the application was deployed at the following link: https://dad-jokes-1.herokuapp.com/
 
 ## Content 
 
-- All text content in this game has been produced by the author.
-- Credit to jokes content
-
-## Media
-
-Media description
+- All text content in the application is created by the author of the project.
+- The initial 24 jokes in the Google Sheet are credited to [Country Living](https://www.countryliving.com/life/a27452412/best-dad-jokes/) and the submitter name for these jokes are set to CL
 
 ## Credits 
 
 ### For code inspiration, design inputs, help and advice.
 
-Text 
+I have consulted numerous websites, individuals and slack channels to get support for the code. No code block is directly copied but some generates from information I gathered from other developers and sites:
 
- - link
- - link
- - link
+ - [Google Sheets for Developers](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/cells) for information about exctracting information from a Google Sheet.
+ - [Code Institute - Love Sandwiches](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode) for inspiration and understanding on how to develope the project.
+ - [W3 Schools](https://www.w3schools.com/python/python_lists.asp) for understanding how to remove items from lists.
+ - [W3 Schools](https://www.w3schools.com/python/gloss_python_type_conversion.asp) for understanding variable conversion.
+ - [Code Institute](https://codeinstitute.net/) for all course material leading up to this project.
 
 ### Acknowledgment
 
- - Person 1
- - Person 2
+ - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My fantastic mentor at Code Institute, thank you for your support, feedback, bug testing and great sense of humor.
+ - [Lauren-Nicole Popich](https://www.linkedin.com/in/lauren-nicole-popich-1ab87539/) Thank you for testing and contribution of ideas and dealing with my stress over this project.
 
  [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe
 
